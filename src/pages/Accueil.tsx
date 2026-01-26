@@ -1,19 +1,39 @@
-import AccueilCartes from "../components/AccueilCartes";
-import AccueilCartesMobile from "../components/AccueilCartesMobile";
+import AccueilCartes from "../components/accueils/AccueilCartes";
+import AccueilCartesMobile from "../components/accueils/AccueilCartesMobile";
+import Actualites from "../components/accueils/Actualites";
+import Avantages from "../components/accueils/Avantages";
+import Banniere from "../components/accueils/Banniere";
+import Parcours from "../components/accueils/Parcour";
+import Equipements from "../components/accueils/Equipements";
 
-const Accueil = () => {
+const Accueil: React.FC = () => {
   return (
-    <div className="bg-[#D2DEEA] min-h-screen relative overflow-hidden">
+    <div className="bg-[#D2DEEA] w-full">
 
-      {/* DESKTOP */}
-      <div className="hidden md:block">
+      {/* HERO DESKTOP */}
+      <section className="hidden md:block relative w-full h-screen md:h-[105vh] lg:h-[100vh]">
         <AccueilCartes />
-      </div>
+      </section>
 
-      {/* MOBILE */}
-      <div className="block md:hidden">
+      {/* HERO MOBILE */}
+      <section className="block md:hidden relative w-full">
         <AccueilCartesMobile />
-      </div>
+      </section>
+
+      {/* AVANTAGES */}
+      <Avantages />
+
+      {/* PARCOURS */}
+      <Parcours />
+
+      {/* ÉQUIPEMENTS */}
+      <Equipements />
+
+      {/* ACTUALITES */}
+      <Actualites />
+
+      {/* BANNIERE */}
+      <Banniere />
 
     </div>
   );
